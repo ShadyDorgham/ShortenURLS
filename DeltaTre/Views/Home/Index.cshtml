@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "DeltaTre";
+    Layout = "_Layout";
+}
+<script src="~/js/AngularApp/Services/ShortenSrvc.js"></script>
+<script src="~/js/AngularApp/Components/ShortenComponent/ShortenCtrl.js"></script>
+
+<div ng-controller="ShortenCtrl"  style="text-align: center">
+    
+    <header style="font-size: larger"><strong>DeltaTre</strong></header>
+    <div dx-text-box="textBox.url" style="margin: 50px"></div>
+
+
+    <div dx-button="{stylingMode: 'contained',
+         text: 'Save',
+                                type: 'success',
+                                width: 500,
+height:50,
+                                onClick: saveUrl
+                            }"></div>
+
+
+
+
+    <div id="gridContainer" dx-data-grid="dataGridValidUrls" style="margin-top: 50px"></div>
+
+</div>
